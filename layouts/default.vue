@@ -1,7 +1,7 @@
 <template>
   <h2>
     default layouts
-    for dogs
+    for
   </h2>
   <slot />
 </template>
