@@ -1,5 +1,5 @@
 <template>
-
+  default layout
 </template>
 
 <script setup>
