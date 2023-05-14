@@ -1,6 +1,6 @@
 <template>
   <h2>
-    default layout
+    default layouts
   </h2>
   <slot />
 </template>
