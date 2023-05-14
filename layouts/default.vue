@@ -1,5 +1,6 @@
 <template>
   default layout
+  <slot />
 </template>
 
 <script setup>
