@@ -1,5 +1,7 @@
 <template>
-  default layout
+  <h2>
+    default layout
+  </h2>
   <slot />
 </template>
 
