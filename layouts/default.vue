@@ -1,7 +1,5 @@
 <template>
-  <h2>
-    default layouts
-  </h2>
+  <NavBar></NavBar>
   <slot />
 </template>
 
