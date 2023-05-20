@@ -3,15 +3,5 @@
 </script>
 
 <template>
-  <div>
-    <h1>
-      test page
-    </h1>
-    <NuxtLink to="/">To Main Page</NuxtLink>
-  </div>
+  <h1>test page</h1>
 </template>
-
-<style scoped lang="scss">
-@import 'assets/scss/_global.scss';
-
-</style>
