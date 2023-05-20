@@ -18,39 +18,7 @@
 </script>
 
 <template>
-  <nav class="menu" v-if="isFullScreen">
-    <ul class="menu__block">
-      <li class="menu__elem">
-        <NuxtLink
-            to="/"
-            class="menu__lnk"
-            exact active-class="active"
-        >
-          Главня
-        </NuxtLink>
-      </li>
-      <li class="menu__elem">
-        <NuxtLink
-            to="/about"
-            class="menu__lnk"
-            active-class="active"
-        >
-          Обо мне
-        </NuxtLink>
-      </li>
-      <li class="menu__elem">
-        <NuxtLink
-            to="/projects"
-            class="menu__lnk"
-            active-class="active"
-        >
-          Мои проекты
-        </NuxtLink>
-      </li>
-    </ul>
-  </nav>
-
-  <nav class="menu" v-else>
+    <nav class="menu" v-if="isFullScreen">
       <ul class="menu__block">
         <li class="menu__elem">
           <NuxtLink
@@ -80,7 +48,39 @@
           </NuxtLink>
         </li>
       </ul>
-  </nav>
+    </nav>
+
+    <nav class="menu" v-else>
+      <ul class="menu__block">
+        <li class="menu__elem">
+          <NuxtLink
+              to="/"
+              class="menu__lnk"
+              exact active-class="active"
+          >
+            Главня
+          </NuxtLink>
+        </li>
+        <li class="menu__elem">
+          <NuxtLink
+              to="/about"
+              class="menu__lnk"
+              active-class="active"
+          >
+            Обо мне
+          </NuxtLink>
+        </li>
+        <li class="menu__elem">
+          <NuxtLink
+              to="/projects"
+              class="menu__lnk"
+              active-class="active"
+          >
+            Мои проекты
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
 </template>
 
 <style scoped lang="scss">
@@ -92,12 +92,18 @@
 }
 
   .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 55px;
     background: none;
 
     &__block{
       width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
     &__elem{
@@ -125,9 +131,6 @@
     &__block{
       width: 50%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
     }
 
     &__elem{
