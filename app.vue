@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div>
+  <Suspense>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
+  </Suspense>
 </template>
 
 <style lang="scss">

@@ -1,8 +1,12 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
  <div class="burger-menu">
-   <nuxt-link class="burger-menu__button">
+   <NuxtLink class="burger-menu__button">
      <span class="burger-menu__lines"></span>
-   </nuxt-link>
+   </NuxtLink>
  </div>
 </template>
 
@@ -10,11 +14,12 @@
   @import 'assets/scss/_global.scss';
 
   // class to toggle burger-menu
-    .active span::before {transform: rotate(45deg);}
+  //во внешнем элименте добавь active class
+    .active span:before {transform: rotate(45deg);}
 
     .active span {height: 0;}
 
-    .active span::after {transform: rotate(-45deg);}
+    .active span:after {transform: rotate(-45deg);}
   //-------------------------->
 
   .burger-menu{
@@ -34,26 +39,26 @@
     }
 
     &__lines,
-    &__lines::before,
-    &__lines::after {
+    &__lines:before,
+    &__lines:after {
       z-index: 30;
       position: absolute;
       top: 50%;  margin-top: -1px;
       left: 50%; margin-left: -15px;
       width: 30px;
       height: 3px;
-      background-color: darkred;
+      background-color: orange;
       transition: 0.2s;
     }
 
-    &__lines::before,
-    &__lines::after{
+    &__lines:before,
+    &__lines:after{
       content: "";
     }
 
-    &__lines::before {transform: translateY(-10px);}
+    &__lines:before {transform: translateY(-10px);}
 
-    &__lines::after {transform: translateY(8px);}
+    &__lines:after {transform: translateY(8px);}
   }
 
   @include breakpoint(large) {

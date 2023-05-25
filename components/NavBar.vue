@@ -1,32 +1,54 @@
-<template>
+<script setup lang="ts">
+    import {ref } from 'vue';
+    import { onClickOutside } from '@vueuse/core';
 
-  <header class="head">
-    <burger-menu class="head__bg" />
-    <nav class="head__nv">
-      <ul class="head__block">
-        <li class="head__elem">
+    const isVisible = ref(false);
+    const target = ref(null);
+
+    const handler = () => isVisible.value = !isVisible.value;
+
+    onClickOutside(target, () =>  isVisible.value ? isVisible.value = false : undefined);
+</script>
+
+<template>
+  <header class="header" ref="target">
+    <burger-menu
+        :class="{active: isVisible}"
+        @click="handler"
+    >
+    </burger-menu>
+
+    <nav
+        :class="{visible: isVisible}"
+         class="header__nv"
+    >
+      <ul class="header__block">
+        <li class="header__elem">
           <NuxtLink
               to="/"
-              class="head__lnk"
+              class="header__lnk"
               exact active-class="active"
+              @click="handler"
           >
             Главня
           </NuxtLink>
         </li>
-        <li class="head__elem">
+        <li class="header__elem">
           <NuxtLink
               to="/about"
-              class="head__lnk"
+              class="header__lnk"
               active-class="active"
+              @click="handler"
           >
             Обо мне
           </NuxtLink>
         </li>
-        <li class="head__elem">
+        <li class="header__elem">
           <NuxtLink
               to="/projects"
-              class="head__lnk"
+              class="header__lnk"
               active-class="active"
+              @click="handler"
           >
             Мои проекты
           </NuxtLink>
@@ -34,75 +56,79 @@
       </ul>
     </nav>
   </header>
-
 </template>
 
 <style scoped lang="scss">
 @import 'assets/scss/_global.scss';
 
-  .active{
-    // как сделать без !important ?
-    color: orange !important;
-  }
+.active{
+  // как сделать без !important ?
+  color: orange !important;
+}
 
-  .head{
+.header{
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  background: none;
+
+  &__nv{
+    position: absolute;
+    top: -200px;
     width: 100%;
-    height: 60px;
-    background: none;
+    height: 100%;
+    transition: all 0.2s;
 
-    &__nv{
-      width: 100%;
-      height: 100%;
-      background: yellowgreen;
-    }
-
-    &__block{width: 100%;}
-    &__elem{list-style-type: none;}
-
-    &__lnk{
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bolder;
-      color: black;
-      transition: ease-in 0.2s;
+    &.visible{
+      top: 0;
     }
   }
 
+  &__block{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: gray;
+  }
+
+  &__elem{list-style-type: none;}
+
+  &__lnk{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    transition: ease-in 0.2s;
+  }
+}
 
 @include breakpoint(large) {
 
-  .head {
+  .header {
+    width: 100%;
+    min-height: 60px;
+    transition: none;
 
-    &__nv {
+    &__nv{
+      position: absolute;
+      top: 0;
       width: 100%;
-      height: 55px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: none;
+      height: 100%;
+      transition: all 0.5s;
     }
 
-    &__block {
-      width: 50%;
+    &__block{
+      width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
+      flex-direction: row;
       justify-content: space-evenly;
-    }
-
-    &__elem {
-      width: 18%;
-      outline: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__lnk {
-      &:hover {
-        font-size: 25px;
-      }
+      background: gray;
     }
   }
 }

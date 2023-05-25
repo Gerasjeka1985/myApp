@@ -5,6 +5,9 @@ const config: NuxtConfig = {
     // alias: {
     //     "@": resolve(__dirname, "/"),
     // },
+    buildModules: [
+        '@vueuse/nuxt',
+    ],
     head: {
       title: 'My App'
     },
