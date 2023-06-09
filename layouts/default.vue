@@ -12,7 +12,7 @@
 
 <style scoped lang="scss">
   .bg {
-    background-image: url('../assets/images/backg.jpg');
+    background-image: url('../assets/images/backg.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
