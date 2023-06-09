@@ -8,6 +8,8 @@
     const handler = () => isVisible.value = !isVisible.value;
 
     onClickOutside(target, () =>  isVisible.value ? isVisible.value = false : undefined);
+    //основная ошибка привязывать через  ref @click  и  навигацию. Она есть изначально и все что надо
+    // это лишь байндить класс visible
 </script>
 
 <template>
@@ -67,14 +69,14 @@
 }
 
 .header{
-  position: relative;
+  position: fixed;
   width: 100%;
   min-height: 60px;
-  background: none;
+  background: rgba(0,0,0,0);
 
   &__nv{
     position: absolute;
-    top: -200px;
+    top: -210px;
     width: 100%;
     height: 100%;
     transition: all 0.2s;
@@ -92,6 +94,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     background: gray;
+    outline: 1px solid black;
   }
 
   &__elem{list-style-type: none;}
@@ -101,7 +104,7 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bolder;
-    color: black;
+    color: $color-primary-white;
     transition: ease-in 0.2s;
   }
 }
@@ -128,7 +131,8 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
-      background: gray;
+      background: rgba(0,0,0,0);
+      outline: none;
     }
   }
 }

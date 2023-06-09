@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import "assets/scss/settings/_colors.scss";
 
 html,
 body{
@@ -9,9 +10,12 @@ body{
   //font-family: 'Josefin Sans', sans-serif;
   font-family: 'IBM Plex Sans', sans-serif;
   //scroll-behavior: smooth;
+  color: $color-primary-white;
+  text-shadow: 2px 5px black ;
 }
 
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
