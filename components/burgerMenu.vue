@@ -47,7 +47,7 @@
       left: 50%; margin-left: -15px;
       width: 30px;
       height: 3px;
-      background-color: orange;
+      background-color: white;
       transition: 0.2s;
     }
 

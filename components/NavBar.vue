@@ -20,6 +20,13 @@
     >
     </burger-menu>
 
+    <div class="header__name">
+      <h2 class="header__title">
+        Герасимов
+      </h2>
+      <p class="header__sub-title">Евгений</p>
+    </div>
+
     <nav
         :class="{visible: isVisible}"
          class="header__nv"
@@ -74,6 +81,17 @@
   min-height: 60px;
   background: rgba(0,0,0,0);
 
+  &__name{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    text-shadow: 4px 5px 4px black;
+  }
+
+  &__sub-title::before, &__sub-title::after{
+    content: '-';
+  }
+
   &__nv{
     position: absolute;
     top: -210px;
@@ -93,7 +111,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    background: gray;
+    background: $color-primary-purple;
     outline: 1px solid black;
   }
 
@@ -115,6 +133,17 @@
     width: 100%;
     min-height: 60px;
     transition: none;
+
+    &__name{
+      width: 200px;
+      height: 60px;
+      top: 10px;
+      left: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
     &__nv{
       position: absolute;

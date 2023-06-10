@@ -1,10 +1,13 @@
 <template>
   <div class="main">
     <h1>
-      Герасимов Евгений Анатольевич
-      <br />
-      <p>frontend developer</p>
+      Проектирование и дизайн сайтов.
     </h1>
+    <p>
+      Меня зовут Евгений, я frontend developer.
+      <br />
+      Я создаю адаптивные сайты. Работаю с анимацией
+    </p>
   </div>
 </template>
 
@@ -15,12 +18,18 @@
     height: 100vh;
     padding-left: 10px;
 
-    h1{
-      padding-top: 100px;
+    h1 {padding-top: 120px;}
+
+    p{
+      font-size: 18px;
+      padding-top: 20px
     }
   }
 
 @include breakpoint(large) {
-  .main {padding-left: 50px;}
+  .main {
+    padding-top: 300px;
+    padding-left: 150px;
+  }
 }
 </style>
