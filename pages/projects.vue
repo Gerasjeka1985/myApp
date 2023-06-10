@@ -37,6 +37,10 @@
     font-weight: bolder;
     color: $color-primary-white;
     transition: ease-in 0.2s;
+
+    &:hover{
+      color: orange;
+    }
   }
 }
 @include breakpoint(large) {
