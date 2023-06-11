@@ -8,12 +8,14 @@
       <br />
       Я создаю адаптивные сайты. Работаю с анимацией
     </p>
+    <ball class="move"></ball>
   </div>
 </template>
 
 <style scoped lang="scss">
 @import 'assets/scss/_global.scss';
   .main{
+    //position: relative;
     width: 100%;
     height: 100vh;
     padding-left: 10px;
@@ -26,11 +28,19 @@
       padding-top: 20px
     }
   }
+  .move{
+    display: none;
+  }
 
 @include breakpoint(large) {
   .main {
     padding-top: 300px;
     padding-left: 150px;
+  }
+
+  .move{
+    display: block;
+    margin-left: 600px;
   }
 }
 </style>

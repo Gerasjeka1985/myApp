@@ -7,7 +7,7 @@ import { Icon } from '@iconify/vue';
       <li class="social__elem">
         <NuxtLink
             class="social__lnk"
-            to="tel:+79262853092"
+            to="tel:+79295300951"
         >
           <Icon class="social__icon" icon="solar:phone-linear" />
         </NuxtLink>
@@ -15,7 +15,7 @@ import { Icon } from '@iconify/vue';
       <li class="social__elem">
         <NuxtLink
             class="social__lnk"
-            to="https://wa.me/79262853092"
+            to="https://wa.me/79295300951"
         >
           <Icon class="social__icon" icon="uim:whatsapp" />
         </NuxtLink>
