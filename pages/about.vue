@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 class="about__title">Контакты :</h1>
+    <h1 class="about__title">Данные для связи :</h1>
     <ul>
       <li class="about__elem">
         <NuxtLink class="about__lnk" target="_blank" to="https://m.vk.com/id215506143">
@@ -12,6 +12,14 @@
           Мой телеграмм
         </NuxtLink>
       </li>
+      <li class="about__elem">
+        <NuxtLink class="about__lnk" target="_blank" to="tel:+79295300951">
+          Позвонить мне
+        </NuxtLink>
+      </li>
+      <li class="about__elem">
+        почта : gekgrom@mail.ru
+      </li>
     </ul>
   </div>
 </template>
@@ -22,6 +30,7 @@
   width: 100%;
   height: 100vh;
   padding-left: 10px;
+  padding-top: 100px;
 
   &__title {padding-top: 100px;}
 

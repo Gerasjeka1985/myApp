@@ -22,6 +22,7 @@
   width: 100%;
   height: 100vh;
   padding-left: 10px;
+  padding-top: 100px;
 
   &__title {padding-top: 100px;}
 

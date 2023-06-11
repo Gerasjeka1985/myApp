@@ -64,6 +64,7 @@
         </li>
       </ul>
     </nav>
+    <my-info></my-info>
   </header>
 </template>
 
@@ -94,6 +95,7 @@
 
   &__nv{
     position: absolute;
+    z-index: 11;
     top: -210px;
     width: 100%;
     height: 100%;

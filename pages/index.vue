@@ -17,6 +17,7 @@
     width: 100%;
     height: 100vh;
     padding-left: 10px;
+    padding-top: 100px;
 
     h1 {padding-top: 120px;}
 
