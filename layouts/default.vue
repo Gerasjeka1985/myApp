@@ -1,14 +1,11 @@
 <template>
-  <h2>
-    default layouts
-  </h2>
-  <slot />
+  <div>
+    <AppHeader></AppHeader>
+    <slot></slot>
+    <AppFooter></AppFooter>
+  </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 </script>
-
-<style scoped lang="scss">
-
-</style>
